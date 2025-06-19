@@ -1,0 +1,37 @@
+package com.vc.mypacapp
+
+import android.os.Bundle
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+
+class AddSongActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_add_song)
+
+        val titleInput = findViewById<EditText>(R.id.etTitle)
+        val artistInput = findViewById<EditText>(R.id.etArtist)
+        val categoryInput = findViewById<EditText>(R.id.etCategory)
+        val commentsInput = findViewById<EditText>(R.id.etComments)
+        val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
+        val btnSave = findViewById<Button>(R.id.btnSave)
+
+        btnSave.setOnClickListener {
+            val title = titleInput.text.toString().trim()
+            val artist = artistInput.text.toString().trim()
+            val category = categoryInput.text.toString().trim()
+            val comments = commentsInput.text.toString().trim()
+            val rating = ratingBar.rating.toInt()
+
+            if (title.isEmpty() || artist.isEmpty()) {
+                Toast.makeText(this, "Title and Artist are required", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val newSong = Song(title, artist, rating, comments, category)
+            MainActivity.songList.add(newSong)
+            Toast.makeText(this, "Song added!", Toast.LENGTH_SHORT).show()
+            finish()
+
+}

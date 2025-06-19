@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="20dp"
+android:gravity="center">
+
+<Button
+android:id="@+id/btnAddSong"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/add_song"
+android:textColor="#795548"
+tools:ignore="VisualLintButtonSize" />
+
+<Button
+android:id="@+id/btnViewPlaylist"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/view_playlist"
+android:layout_marginTop="16dp"
+tools:ignore="VisualLintButtonSize" />
+
+<Button
+android:id="@+id/btnExit"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="@string/exit_app"
+android:layout_marginTop="16dp"
+tools:ignore="VisualLintButtonSize" />
+</LinearLayout>
