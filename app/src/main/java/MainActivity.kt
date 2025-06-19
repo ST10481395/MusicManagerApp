@@ -1,34 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:padding="20dp"
-android:gravity="center">
+package com.example.musicplaylist
 
-<Button
-android:id="@+id/btnAddSong"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="@string/add_song"
-android:textColor="#795548"
-tools:ignore="VisualLintButtonSize" />
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.example.musicmanagerapp.AddSongActivity
 
-<Button
-android:id="@+id/btnViewPlaylist"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="@string/view_playlist"
-android:layout_marginTop="16dp"
-tools:ignore="VisualLintButtonSize" />
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-<Button
-android:id="@+id/btnExit"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="@string/exit_app"
-android:layout_marginTop="16dp"
-tools:ignore="VisualLintButtonSize" />
-</LinearLayout>
+        findViewById<Button>(R.id.btnAddSong).setOnClickListener {
+            startActivity(Intent(this, AddSongActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btnViewPlaylist).setOnClickListener {
+            startActivity(Intent(this, PlaylistActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btnExit).setOnClickListener {
+            finishAffinity() // Closes the app
+        }
+    }
+}
