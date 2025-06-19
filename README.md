@@ -12,7 +12,24 @@ An Android app built with Kotlin that lets users manage a playlist of songs by:
 
 ## 📱 Screenshots
 
-![image](https://github.com/user-attachments/assets/c330742e-a1e1-422a-acf9-e3bf7554170c)
+
+ 
+ ![image](https://github.com/user-attachments/assets/37d1b95c-8638-4059-8aed-46f12507b639)
+
+ 
+![image](https://github.com/user-attachments/assets/55324d51-2251-4244-8494-2c42895e113f)
+
+
+ 
+ ![image](https://github.com/user-attachments/assets/aa1d2f3f-4126-491e-8924-b0bc3deb9f2a)
+
+ 
+ ![image](https://github.com/user-attachments/assets/a2b781fc-2ef2-402e-b0ce-8692ed47e33a)
+
+![image](https://github.com/user-attachments/assets/c5d2e37f-1716-4aaa-ae99-f70ccc8b2c64)
+
+![image](https://github.com/user-attachments/assets/f3886c69-0e6a-45de-a7c2-60ffdd610002)
+
 
 ---
 
